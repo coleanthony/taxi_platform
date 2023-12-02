@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Free Responsive Html5 Templates">
+    <meta name="author" content="">
+
+    <title>explore 2</title>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Custom CSS -->
+    <link href="../static/css/style.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+    <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Owl Carousel Assets -->
+    <link href="../static/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../static/owl-carousel/owl.theme.css" rel="stylesheet">
+
+	<!-- jQuery and Modernizr-->
+	<script src="../static/js/jquery-2.1.1.js"></script>
+
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="../static/js/html5shiv.js"></script>
+	<script src="../static/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="top">
+		<div class="container">
+			<div class="row">
+			</div>
+		</div>
+	</div>
+
+	<div id="page-content">
+
+			<div class="container">
+				<div class="row heading">
+					<div style="text-align: center;">
+	                <h2>出行位置可视化分析</h2>
+				</div>
+				<div class="row">
+						<!--img src="pic/mg1.jpg" class="img-responsive"/-->
+						<div class="content">
+							<p>在该模块中，将对乘客的出行位置进行可视化分析。</p>
+							<p>首先我们的数据来自该范围。</p>
+							<p style="text-align: center;">
+        						<img src="../static/pic/map.PNG" alt="" width=600 height=300>
+    						</p>
+							<p>查看坐标分布密度。</p>
+							<p style="text-align: center;">
+        						<img src="../static/pic/jg.png" alt="" width=450 height=450>
+    						</p>
+							<p>对其接送客上车与下车位置进行可视化，得到如下结果。</p>
+							<p style="text-align: center;">
+        						<img src="../static/pic/n2_1.PNG" alt="" width=600 height=400>
+    						</p>
+                            <p>下图展示每天早上7点至晚上9点的交通拥堵程度。</p>
+							<p style="text-align: center;">
+        						<img src="../static/pic/n2.png" alt="" width=600 height=600>
+    						</p>
+							<p>交通流量示意</p>
+							<p style="text-align: center;">
+        						<img src="../static/pic/n2_2.png" alt="" width=600 height=600>
+    						</p>
+							<p>该图出行核密度图,出租车出行最长的是拉瓜迪亚机场和JKF机场。大多数出租车出行发生在曼哈顿或曼哈顿周边，持续时间较短。</p>
+							<p style="text-align: center;">
+        						<img src="../static/pic/dy.png" alt="" width=600 height=400>
+    						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<footer>
+		<div class="wrap-footer">
+			<div class="container">
+				<div class="row">
+					<div class="copyright">Copyright &copy; 2021.CWH Work Studio All rights reserved.</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer -->
+
+	<!-- jQuery -->
+	<script src="../static/js/jquery-2.1.1.js"></script>
+
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../static/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="../static/js/agency.js"></script>
+
+	<!-- Animated Top -->
+	<script src="../static/js/jquery.easing.min.js"></script>
+	<script src="../static/js/classie.js"></script>
+	<script src="../static/js/cbpAnimatedHeader.js"></script>
+
+	<script>
+		$(function() {
+			$('#nav-wrapper').height($("#nav").height());
+
+			$('#nav').affix({
+				offset: { top: $('#nav').offset().top }
+			});
+		});
+	</script>
+
+	<!-- carousel -->
+	<script src="../static/owl-carousel/owl.carousel.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("#owl-brand").owlCarousel({
+        autoPlay: 3000,
+        items : 1,
+		itemsDesktop : [1199,1],
+        itemsDesktopSmall : [979,2],
+		navigation: false,
+      });
+    });
+    </script>
+
+	<!-- Google Map -->
+	<script>
+		$('.maps').click(function () {
+		$('.maps iframe').css("pointer-events", "auto");
+	});
+
+	$( ".maps" ).mouseleave(function() {
+	  $('.maps iframe').css("pointer-events", "none");
+	});
+	</script>
+
+</body>
+</html>

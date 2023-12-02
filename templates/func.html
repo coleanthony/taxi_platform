@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SEEDEV大数据平台</title>
+	<script src="../static/js/jquery-2.1.1.min.js"></script>
+	<script>
+	 $(window).load(function(){  
+             $(".loading").fadeOut()
+            })  
+	</script>
+	
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/map.css">
+</head>
+<body>
+	<div class="loading">
+      <div class="loadbox"> <img src="../static/images/loading.gif"> 页面加载中... </div>
+    </div>
+<div class="data">
+    <div class="data-title">
+        <div class="title-center ">SEEDEV大数据平台</div>
+    </div>
+    <div class="data-content">
+        <div class="con-left fl">
+            <div class="left-top">
+                <div class="info-box boxstyle">
+                    <div class="title">实时统计</div>
+                    <div class="info-main">
+						<ul>
+                            <li><img src="../static/images/info-img-4.png" alt=""><p>New York City</p></li>
+                            <li><img src="../static/images/info-img-1.png" alt=""><span>支付均价</span><p>16.18</p></li>
+							<li><img src="../static/images/info-img-2.png" alt=""><span>平均旅途用时</span><p>962s</p></li>
+							<li><img src="../static/images/info-img-3.png" alt=""><span>订单数目</span><p>{{strlen}}</p></li>
+						</ul>
+                    </div>
+                </div>
+                <div class="top-bottom boxstyle">
+                    <div class="title">支付方式</div>
+                    <div id="echarts_1" class="charts"></div>
+                </div>
+            </div>
+            <div class="left-bottom boxstyle">
+                <div class="title">车型分类</div>
+                <div id="echarts_2" class="charts"></div>
+            </div>
+        </div>
+        <div class="con-center fl">
+            <div class="cen-top map" id="map">
+                <div style="width: 750px;height: 230px; overflow-x:auto ;overflow-y: auto;">
+                    {% for table in tables %}
+                    {{ table|safe }}
+                    {% endfor %}
+                </div>
+                <div class="right-top boxstyle">
+                    <div class="title">查询</div>
+                    <form action='/Search' method='POST'>
+                        id：<input type=text name="id"/><br>
+                        vendor_id：
+                            <select name="vendor" id="vendor">
+                                <option value="1">vendor 1</option>
+                                <option value="2">vendor 2</option>
+                            </select>
+                            <br>
+                        passenger count：
+                                <select name="passenger" id="pass">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            <br>
+                        trip_duration：
+                                <select name="trip" id="tp">
+                                    <option value="0-200">0-200</option>
+                                    <option value="201-500">201-500</option>
+                                    <option value="501-1000">501-1000</option>
+                                    <option value="1001-2000">1001-2000</option>
+                                    <option value="2001-3000">2001-3000</option>
+                                    <option value="3001-10000">3001-10000</option>
+                                </select>
+                                <br>
+                        start time：<input type="date" name="start_date" /> end time：<input type="date" name="end_date" /><br>
+                        提交：
+                            <input type="submit" value="Submit" class="btns" onmouseover="this.style.backgroundPosition='left -40px'"  onmouseout="this.style.backgroundPosition='left top'"/>
+                </form>
+
+                </div>
+            </div>
+            <div class="cen-bottom boxstyle">
+                <div class="title">出行高峰期(平均旅程时间)</div>
+                <div id="echarts_3" class="charts"></div>
+            </div>
+        </div>
+        <div class="con-right fr">
+            <div class="right-top boxstyle">
+                <div class="title">行程用时预测</div>
+                <form id="upload-form" action="/Predict" method="post" enctype="multipart/form-data" >
+　　　                 <input type="file" id="upload" name="upload" /> <br/>
+　　　             <input type="submit" value="Upload" class="btns" onmouseover="this.style.backgroundPosition='left -40px'"  onmouseout="this.style.backgroundPosition='left top'"/>
+                </form>
+                <div style="width: 350px;height: 120px; overflow-x:auto ;overflow-y: auto;">
+                    {% for predict in predictions %}
+                    {{ predict|safe }}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="right-center boxstyle">
+                <div class="title">每月订单统计</div>
+                <div id="echarts_4" class="charts"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="../static/js/echarts.min.js"></script>
+<script src="../static/js/echarts.js"></script>
+</html>

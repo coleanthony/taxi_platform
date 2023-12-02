@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Free Responsive Html5 Templates">
+    <meta name="author" content="">
+
+    <title>explore 1</title>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Custom CSS -->
+    <link href="../static/css/style.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+    <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Owl Carousel Assets -->
+    <link href="../static/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../static/owl-carousel/owl.theme.css" rel="stylesheet">
+
+	<!-- jQuery and Modernizr-->
+	<script src="../static/js/jquery-2.1.1.js"></script>
+
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="../static/js/html5shiv.js"></script>
+	<script src="../static/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="top">
+		<div class="container">
+			<div class="row">
+			</div>
+		</div>
+	</div>
+
+	<div id="page-content">
+
+			<div class="container">
+				<div class="row heading">
+					<div style="text-align: center;">
+	                <h2>市民出行规律探索</h2>
+				</div>
+				<div class="row">
+							<!--img src="pic/mg1.jpg" class="img-responsive"/-->
+							<div class="content">
+								<p>该部分探索纽约城市市民的打车出行习惯，通过对数据的定量分析，针对提出的问题相应地得出了些许结论。</p>
+								<p>何时为打车需求高发期？下图展示以周为单位对交通繁忙程度的分析。星期一，人们逐渐返回工作岗位，早上7:10交通开始繁忙，晚上7:00交通也开始变轻。 星期二、星期三和星期四我们达到巡航速度，从早上6:50到晚上8:00交通繁忙。 星期五和前几天一样，但直到晚上10点才结束。 星期六从上午11点到晚上23点交通很拥挤，我想原因很明显。 星期天一整天交通都很畅通，但从下午1:00到7:00的交通流量稍高。</p>
+								<p style="text-align: center;">
+        							<img src="../static/pic/n3_2.png" alt="" width=600 height=1000>
+    							</p>
+								<p>我们再以周为单位看看打车的比率。</p>
+								<p style="text-align: center;">
+        							<img src="../static/pic/n1_1.png" alt="" width=800 height=3000>
+    							</p>
+								<p>推测订单数量可能与星期几有关？</p>
+								<p style="text-align: center;">
+        							<img src="../static/pic/n1_2.png" alt="" width=800 height=200>
+    							</p>
+								<p>推测订单数量可能与星期几有关?我们可以看出其数量周一-周三是最多的</p>
+								<p style="text-align: center;">
+        							<img src="../static/pic/duration.png" alt="" width=600 height=400>
+    							</p>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+	<footer>
+		<div class="wrap-footer">
+			<div class="container">
+				<div class="row">
+					<div class="copyright">Copyright &copy; 2021.CWH Work Studio All rights reserved.</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer -->
+
+
+
+	<!-- jQuery -->
+	<script src="../static/js/jquery-2.1.1.js"></script>
+
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../static/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="../static/js/agency.js"></script>
+
+	<!-- Animated Top -->
+	<script src="../static/js/jquery.easing.min.js"></script>
+	<script src="../static/js/classie.js"></script>
+	<script src="../static/js/cbpAnimatedHeader.js"></script>
+
+	<script>
+		$(function() {
+			$('#nav-wrapper').height($("#nav").height());
+
+			$('#nav').affix({
+				offset: { top: $('#nav').offset().top }
+			});
+		});
+	</script>
+
+	<!-- carousel -->
+	<script src="../static/owl-carousel/owl.carousel.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("#owl-brand").owlCarousel({
+        autoPlay: 3000,
+        items : 1,
+		itemsDesktop : [1199,1],
+        itemsDesktopSmall : [979,2],
+		navigation: false,
+      });
+    });
+    </script>
+
+	<!-- Google Map -->
+	<script>
+		$('.maps').click(function () {
+		$('.maps iframe').css("pointer-events", "auto");
+	});
+
+	$( ".maps" ).mouseleave(function() {
+	  $('.maps iframe').css("pointer-events", "none");
+	});
+	</script>
+
+</body>
+</html>
